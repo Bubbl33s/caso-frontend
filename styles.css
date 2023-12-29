@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+
+:root {
+    --color1: #eabed5;
+    --color2: #d6a0bf;
+    --color3: #b97ea6;
+    --color4: #985b87;
+    --color5: #69224e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Amatic SC', sans-serif;
+}
+
+header {
+    background-color: var(--color4);
+    height: 10vh;
+    max-height: 100px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    background-color: var(--color2);
+    flex: 1;
+}
+
+footer {
+    background-color: var(--color4);
+    height: 10vh;
+    display: flex;
+}
+
+.git-link {
+    text-decoration: none;
+    color: #000;
+    margin: auto;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+}
+
+.git-link p {
+    margin-left: 5px;
+    margin-top: -3px;
+}
+
+.git-link:hover {
+    background-color: #333;
+    color: rgb(255 255 255);
+}
+
+.git-link svg {
+    transition: 1s;
+}
+
+.git-link:hover svg {
+    filter: invert(1);
+}

@@ -35,6 +35,24 @@ header {
 .content {
     background-color: var(--color2);
     flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#game-container {
+    min-width: 500px;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#controls {
+    border: 1px solid #000;
+    width: 500px;
+    height: 500px;
+    margin-left: 50px;
 }
 
 footer {

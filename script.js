@@ -7,6 +7,9 @@ let DIAM = 25;
 let spheres = [];
 let isPaused = false;
 
+let quantity = document.getElementById('quantity');
+let count = document.getElementById('count');
+
 function setup() {
     let canvas = createCanvas(WIDTH, HEIGHT);
     canvas.parent('game-container');
@@ -32,21 +35,28 @@ function draw() {
 
 let pause = () => isPaused = !isPaused;
 
-function createSphere() {
-    let sphere = new Sphere(WIDTH/2, HEIGHT/2, 13, 10);
+function createRandomSpheres() {
+    let numOfSpheres = parseFloat(quantity.value);
 
-    spheres.push(sphere);
+    for (let i = 0; i < numOfSpheres; i++) {
+        let randX = Math.random()*(WIDTH - 2*DIAM) + DIAM;
+        let randY = Math.random()*(HEIGHT - 2*DIAM) + DIAM;
+        let randDir = Math.random()*360;
+        let randVel = Math.random()*20;
+
+        let sphere = new Sphere(randX, randY, randDir, randVel);
+        spheres.push(sphere);
+    }
+
+    count.innerText = parseInt(count.innerText) + numOfSpheres;
+    quantity.value = 1;
 }
 
-function createRandomSphere() {
-    let randX = Math.random()*(WIDTH - 2*DIAM) + DIAM;
-    let randY = Math.random()*(HEIGHT - 2*DIAM) + DIAM;
-    let randDir = Math.random()*360;
-    let randVel = Math.random()*20;
-
-    let sphere = new Sphere(randX, randY, randDir, randVel);
-    spheres.push(sphere);
-}
+let clearSpheres = () => {
+    spheres.splice(0, spheres.length);
+    count.innerText = 0;
+    quantity.value = 1;
+};
 
 class Sphere {
     constructor(x, y, direction, velocity) {

@@ -49,10 +49,54 @@ header {
 }
 
 #controls {
-    border: 1px solid #000;
-    width: 500px;
-    height: 500px;
+    font-family: 'Amatic SC', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    background-color: var(--color1);
+    border-radius: 15px;
+    width: 200px;
+    height: 350px;
     margin-left: 50px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.q-container {
+    font-size: 30px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.q-container label {
+    margin-right: 10px;
+}
+
+#quantity {
+    width: 50px;
+    font-family: 'Amatic SC', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    padding-left: 10px;
+    height: 30px;
+}
+
+button {
+    font-family: 'Amatic SC', sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+    width: 130px;
+    height: 40px;
+    margin-bottom: 15px;
+}
+
+#controls p {
+    font-size: 40px;
 }
 
 footer {

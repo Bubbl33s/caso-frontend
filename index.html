@@ -16,10 +16,13 @@
 
         </picture>
         <section id="controls">
-            <div class="button-container">
+                <div class="q-container">
+                    <label for="quantity">Quantity</label><input id="quantity" type="number" min="1" max="99" value="1"/>
+                </div>
+                <button onclick="createRandomSpheres()">Generate</button>
                 <button onclick="pause()">Pause</button>
-                <button onclick="createRandomSphere()">Generate Random</button>
-            </div>
+                <button onclick="clearSpheres()">Clear</button>
+                <p>Count: <span id="count">0</span></p>
         </section>
     </main>
     <footer>
